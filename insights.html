@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+  <head>  	
+  	<meta charset="utf-8">
+    <meta name="description" content="Responsive Bootstrap Landing Page Template">
+    <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Grayrids">
+		<title>MASH - Insights</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css" media="screen">
+    <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
+    <link href="css/material.min.css" rel="stylesheet">
+    <link href="css/ripples.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+      
+        var XMLHttpRequestObj = false ;
+
+        if (window.XMLHttpRequest) {
+          XMLHttpRequestObj = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+          XMLHttpRequestObj = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+       XMLHttpRequestObj.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          retriever(this);
+        }
+       };
+
+       XMLHttpRequestObj.open ("GET","insights.xml");
+       XMLHttpRequestObj.send();  
+      
+      function retriever(xml) {
+        var xmlDoc = xml.responseXML ;
+
+        insightsheaderfromxml = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        insightscontentfromxml = xmlDoc.getElementsByTagName("content")[0].childNodes[0].nodeValue;
+
+        document.getElementById("insightsheader").innerHTML = insightsheaderfromxml;
+        document.getElementById("insightscontent").innerHTML = insightscontentfromxml;
+      }
+      
+    </script>
+      
+      
+      <div class="navbar navbar-invers menu-wrap">
+      <div class="navbar-header text-center">
+        <a class="navbar-brand logo-right" href="javascript:void(0)">MASH</a>
+      </div>
+        <ul class="nav navbar-nav main-navigation">
+          <li ><a href="index.html">Home</a></li>
+          <li class="active"><a href="insights.html%20">Insights</a></li>
+            <li><a href="About.html">About</a></li>
+          <li><a href="CSoon/csoon.html">Get MASH</a></li>
+          <li><a href="CSoon/csoon.html">Contact</a></li>
+        </ul>
+        <button class="close-button" id="close-button">Close Menu</button>
+    </div>
+      
+      
+      <div class="col-md-12">
+
+            <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
+              <div class="container">
+                <div class="navbar-header">
+                  <a class="logo-left " href="index.html" >MASH</a>
+                </div>
+                <div class="navbar-right">
+                  <button class="menu-icon"  id="open-button">
+                    <i class="mdi-navigation-menu"></i>
+                  </button>             
+                </div>
+              </div>
+            </div>
+        </div> 
+      
+      <br>
+      <br>
+      
+      <br>
+      <section id="main-features" class="section main-feature-gray">
+      <div class="container">
+
+        <div >   
+          <div class="col-md-8 col-sm-8 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms" >
+            <div class="section-header">
+              <h1 class="section-title wow fadeInRight" id="insightsheader">
+                <!-- Insights -<br> A new experience -->
+                  </h1>
+                
+      <br>
+      <br>
+  
+                
+              <p class="title-small" id="insightscontent">
+            <!--     Open a new world of fresh experiences with MASH. With a plethora of features and security assured, breathe a new life into your device. <br><br>Scroll down to explore more! -->
+                </p>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      <!--Features begin-->
+      
+       
+      <section id="main-features" class="section main-feature-gray">
+      <div class="container">
+
+        <div class="row">   
+          <div class="col-md-8 col-sm-8 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Customize
+              </h3>
+              <p style="font-size: 150%;">
+                  With an open OS, you’re in control. You have more freedom and more choices, from the big picture down to the smallest details. Your mobile experience should be as unique as you.
+              </p>
+              
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-4 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <img src="img/features/Insights_Main.png" class="img-responsive" alt="">
+          </div>  
+
+        </div>
+
+      </div>
+    </section>
+
+
+     <section id="main-features" class="section">
+      <div class="container">
+
+
+        <div class="row">   
+          <div class="col-md-4 col-sm-4 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <img src="img/features/Insight1_mods.png" class="img-responsive" alt="">
+          </div>    
+
+          <div class="col-md-8 col-sm-8 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Mods Integration
+              </h3>
+              <p style="font-size: 150%;">
+                The post-app era is now redundant. Enter Mods. Mods are intelligent, aware, and lightweight experiences built directly into the OS. MASH is Mod ready, which means it has all those functionalities that set the ROM apart from industry standards. Just saying.
+              </p>
+              
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+
+     <section id="main-features" class="section main-feature-gray">
+      <div class="container">
+
+        <div class="row">   
+          <div class="col-md-8 col-sm-8 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Per-app Theming
+              </h3>
+              <p style="font-size: 150%;">
+                 MASH offers customisation at the deepest levels. From system apps to various third party applications, theme each and every aspect of the system. Make it yours, We've got your back. 
+              
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-4 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <img src="img/features/Insights3_themes.png" class="img-responsive" alt="">
+          </div>  
+
+        </div>
+
+      </div>
+    </section>
+      
+      
+      <section id="main-features" class="section">
+      <div class="container">
+
+
+        <div class="row">   
+          <div class="col-md-4 col-sm-4 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <img src="img/features/Insights4_AudioFX.png" class="img-responsive" alt="">
+          </div>    
+
+          <div class="col-md-8 col-sm-8 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Better Audio
+              </h3>
+              <p style="font-size: 150%;">
+                AudioFX gives you unmatched customization and quality for your music. AudioFX delivers 24-bit High-Res Lossless Audio with bass boost, surround, reverb, and 13 preset configurations. Sounds good?
+              </p>
+              
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+      
+           <section id="main-features" class="section main-feature-gray">
+      <div class="container">
+
+        <div class="row">   
+          <div class="col-md-8 col-sm-8 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Privacy and Security
+              </h3>
+              <p style="font-size: 150%;">
+                Privacy Guard helps you understand exactly what your device is revealing to the world—so you can have total control over what is shared. While PIN Scramble randomizes the numbers behind your PIN every time. You never have to worry about someone spying on your PIN strokes or reconstructing your PIN from smudges on your screen.
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-4 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <img src="img/features/Insights5_PrivacyGuard.png" class="img-responsive" alt="">
+          </div>  
+
+        </div>
+
+      </div>
+    </section>
+      
+      <section id="main-features" class="section">
+      <div class="container">
+
+
+        <div class="row">   
+          <div class="col-md-4 col-sm-4 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <img src="img/features/Insights7_TruecallerIntegration.png" class="img-responsive" alt="">
+          </div>    
+
+          <div class="col-md-8 col-sm-8 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="feature-item">
+              <h3 class="title-small">
+                Less Spam, More Connected 
+              </h3>
+              <p style="font-size: 150%;">
+                Use Blocked Caller List to permanently block any numbers you wish from ever calling or texting your device again. Plus, with more than 1.7 billion contacts worldwide, the robust caller ID included in Truecaller Integrated Dialer allows you to identify and block incoming spam right from your heads up notification.
+              </p>
+              
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+      
+      
+       <section id="cta">
+      <div class="container">
+        <div class="row text-center">         
+            <h3 class="title-small wow bounce" data-wow-duration="1000ms" data-wow-delay="300ms"><em>'What are you waiting for?' </em></h3>
+             <a href="CSoon/csoon.html" class="btn btn-lg btn-border">Love Me like You Do!</a>
+          </div>
+      </div>
+    </section>
+      
+      <!--Footer to be included in all pages-->
+      
+      <section id="footer">
+      <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>Navigate</h3>
+              <ul>
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="insights.html%20">Insights</a>
+                    
+                </li>
+                  <li><a href="About.html">About</a></li>
+                <li><a href="https://cyngn.com/">Cyanogenmod.org</a>
+                </li>
+                <li><a href="CSoon/csoon.html">Get in touch!</a>
+                </li>
+                  
+                </ul>
+            </div>
+              
+               <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>Email</h3>
+              <ul>
+                <li><a href="mailto:patelashok5896@gmail.com">sayhello@mash.com</a>
+                </li>
+                <li><a href="mailto:sheetal.thakkar@somaiya.edu">pressqueries@mash.com</a>
+                </li>
+                </ul>
+            </div>
+              
+              <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>Contact</h3>
+              <ul>
+                <li><a>+91 989 221 1591</a>
+                </li>
+                </ul>
+            </div>
+           
+           
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h3>Find us on</h3>
+              <a class="social" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+              
+              <a class="social" href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
+            </div>
+          </div>
+        </div>  
+      </div>      
+      <!-- Go to Top Link -->
+      <a href="insights.html%20" class="btn btn-primary back-to-top">
+      <i class=" mdi-hardware-keyboard-arrow-up"></i>
+      </a>
+    </section> 
+
+    <section id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="copyright-text">
+             © 2016 APK Design Labs. All rights reserved. <br>Developed and Designed by 
+              <br><a >
+                Sheetal Thakkar, 1511002 <br> Under Audit Course - Web Programming (2015-16)  
+              </a><center><a href="mailto:sheetal.thakkar@somaiya.edu">sheetal.thakkar@somaiya.edu</a></center>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>     
+    </div>  
+
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ripples.min.js"></script>
+    <script src="js/material.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.mmenu.min.all.js"></script> 
+    <script src="js/count-to.js"></script>   
+    <script src="js/jquery.inview.min.js"></script>     
+    <script src="js/classie.js"></script>
+    <script src="js/jquery.nav.js"></script>      
+    <script src="js/smooth-on-scroll.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            // This command is used to initialize some elements and make them work properly
+            $.material.init();
+        });
+    </script>
+
+  </body>
+
+</html>

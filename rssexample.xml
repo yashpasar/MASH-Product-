@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+  <title>MASH Product Landing Page</title>
+  <link>https://www.mash-product.000webhostapp.com</link>
+  <description>Product landing page for our new operating system</description>
+  <item>
+    <title>RSS Feed 1</title>
+    <link>https://www.w3schools.com/xml/xml_rss.asp</link>
+    <description>New RSS tutorial on W3Schools</description>
+  </item>
+  <item>
+    <title>RSS Feed 2</title>
+    <link>https://www.w3schools.com/xml</link>
+    <description>New XML tutorial on W3Schools</description>
+  </item>
+  <atom:link href="http://mash-product.000webhostapp.com/rss/rssexample.xml" rel="self" type="application/rss+xml" />
+</channel>
+
+</rss>

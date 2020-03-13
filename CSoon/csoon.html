@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>MASH - Coming Soon</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="tools/style.css" rel="stylesheet" type="text/css" />
+    <link href="tools/960.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/Clarendon_LT_Std_700.font.js"></script>
+    <script type="text/javascript">
+	   Cufon.replace('h1,h3', {fontFamily: 'Roboto', hover:true})
+    </script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+  
+
+  
+
+</head>
+
+<body style="background-image: url(../img/CSoonBG.jpg) ; background-size: cover; background-repeat: no-repeat;">
+
+    <div id="shim"></div>
+    <div id="content" >
+	<div class="logo_box" id="csoon"><h1>Coming soon<br/>to a device<br/>near you!</h1></div>          
+	<div class="main_box">
+		<h2>We are working on it. <br/><span>In the mean time connect with us with the information below</span></h2>
+		
+		<ul class="info">
+			<li>
+				<h3>P</h3>
+				<p id="phone1"><!-- +91 989 221 1591 <br/>+91 720 889 3268--></p>
+			</li>
+			<li>
+				<h3>A</h3>
+				<p id="address">911, Cloudrassic Park<br/>Somewhere in the universe</p>
+			</li>
+            <li><h3>E</h3>
+                <p >
+                    <a id="mail">sayhello@mash.com<br>pressqueries@mash.com</a>
+                </p>
+            </li>
+            <li>
+                <br>
+                <br>
+                    <hr width="100%">
+            <a href="../index.html" style="color:white; font-size:120% ; text-decoration:none ">Home</a>
+                    <hr width="100%">
+            </li>
+            
+    	</ul>
+	</div>
+        
+</div>
+    
+    <script type="text/javascript">
+        $(function() {
+            $.getJSON('contact.json',function(data) {
+                $.each(data.contacts, function(i, f) {
+                    var number = f.phone
+                    $("number").appendTo("#phone1");
+                });
+            });
+        });
+    </script> 
+
+      <script>
+      	$.getJSON("csoon.json", function(obj) {
+      		document.getElementById("phone1").innerHTML =
+			obj.contacts[0].phone1 +"<br/>"+obj.contacts[0].phone2;
+
+			document.getElementById("address").innerHTML =
+			obj.contacts[0].address ;
+
+			document.getElementById("mail").innerHTML =
+			obj.contacts[0].mail1 +"<br>"+obj.contacts[0].mail2;
+    
+});
+
+var data = '{"contacts" : [' +
+	 '{ "phone1":"7977553949",' +
+	 '"phone2":"9892616211",' +
+	 '"mail1":"ashok05@somaiya.edu",' +
+	 '"mail2":"yash.p@somaiya.edu",' +
+	 '"address":"B215, Bhaskaracharya, KJSCE, Vidyavihar"' +
+	 '}]}'; 
+
+obj = JSON.parse(data);
+
+document.getElementById("phone1").innerHTML =
+obj.contacts[0].phone1 +"<br/>"+obj.contacts[0].phone2;
+
+document.getElementById("address").innerHTML =
+obj.contacts[0].address ;
+
+document.getElementById("mail").innerHTML =
+obj.contacts[0].mail1 +"<br>"+obj.contacts[0].mail2;
+
+</script>
+
+</body>
+    
+</html>
